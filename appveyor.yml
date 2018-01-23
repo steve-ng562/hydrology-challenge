@@ -1,3 +1,25 @@
-version: 1.0.{build}
-build_script:
-- ps: 
+environment:
+
+  matrix:
+
+
+    - PYTHON: "C:\\Python27"
+    - PYTHON: "C:\\Python33"
+    - PYTHON: "C:\\Python34"
+    - PYTHON: "C:\\Python35"
+    - PYTHON: "C:\\Python27-x64"
+    - PYTHON: "C:\\Python33-x64"
+      DISTUTILS_USE_SDK: "1"
+    - PYTHON: "C:\\Python34-x64"
+      DISTUTILS_USE_SDK: "1"
+    - PYTHON: "C:\\Python35-x64"
+    - PYTHON: "C:\\Python36-x64"
+
+install:
+  - "%PYTHON%\\python.exe -m pip install pandas"
+
+build: off
+
+test_script:
+  - "build.cmd %PYTHON%\\python.exe hydrologyChallenge.py test"
+
