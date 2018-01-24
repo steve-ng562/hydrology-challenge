@@ -1,4 +1,4 @@
-from hydrology import hydrologyChallenge
+import hydrologyChallenge
 import math
 # import validation data
 station_id = [0,1,2,3]
