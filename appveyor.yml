@@ -17,9 +17,10 @@ environment:
 
 install:
   - "%PYTHON%\\python.exe -m pip install pandas"
+  - "%PYTHON%\\python.exe -m pip install pytest"
 
 build: off
 
 test_script:
-  - "build.cmd %PYTHON%\\python.exe hydrologyChallenge.py test"
+  - "%PYTHON%\\python.exe hydrologyChallenge_test.py test"
 
