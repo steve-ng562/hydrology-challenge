@@ -10,5 +10,6 @@ install:
 build: off
 
 test_script:
+  - "%PYTHON%/Scripts/py.test"
   - "%PYTHON%\\python.exe hydrologyChallenge_test.py test"
 
