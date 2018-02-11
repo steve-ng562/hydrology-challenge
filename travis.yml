@@ -1,0 +1,11 @@
+language: python
+python: 
+  - "3.6"
+  os:
+    -linux
+    -osx
+  script:
+    -pytest
+  install:
+    -pip install pandas
+    

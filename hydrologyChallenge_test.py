@@ -1,17 +1,11 @@
-import hydrologyChallenge
-import math
-# import validation data
-station_id = [0,1,2,3]
-angle_degrees = [90,60,30,0]
-cosine = []
-
-for s in angle_degrees:  # calculate the cosine of validation data
-    cosine.append(round(math.cos(math.radians(s)),4))
+from hydrology import hydrologyChallenge
 
 
 def test():  # compare test data to validation data
     data = hydrologyChallenge.process("http://rapid-hub.org/data/angles_UCI_CS.csv")
-    assert data.loc[:, "cos"].tolist() == cosine
+    data2 = hydrologyChallenge.process("http://rapid-hub.org/data/angles_UCI_CS_out.csv")
+    assert data.loc[:, "angle_degrees"].tolist() == data.loc2[:, "station_id"].tolist()
+    assert data.loc[:, "station_id"].tolist() == data.loc2[:, "station_id"].tolist()
 
 
 
