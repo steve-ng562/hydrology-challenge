@@ -1,4 +1,4 @@
-from hydrology import hydrologyChallenge
+import hydrologyChallenge
 
 
 def test():  # compare test data to validation data
