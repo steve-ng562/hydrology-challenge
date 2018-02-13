@@ -2,7 +2,7 @@ language: python
 python:
   - "3.6"
 script:
-- hydrologyChallenge_test.py
+- python hydrologyChallenge_test.py
   install:
     -pip install pandas
     
