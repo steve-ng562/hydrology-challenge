@@ -4,6 +4,6 @@ python:
 install:
 -pip install pandas
 script:
-- pytest
+- python hydrologyChallenge_test.py
 
     
